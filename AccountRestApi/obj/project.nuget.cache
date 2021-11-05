@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Jk2+VvrKVy81ssSbPwvAB863oe2ATzf1sJiLXkY3YMta+vPg4Dk5ud+cinl/KboAmF3/uYnTeeRiUDM2EAh+sg==",
+  "dgSpecHash": "QhwHJ7GnBcz+rwUJzwvj/6uzuFwKDMt+tv/eNnzM1cSzzSX3J2PRi4sUnNrrpAOb7QdWrEgQg9aNwqLdxoW9Iw==",
   "success": true,
   "projectFilePath": "/Users/hays/RiderProjects/AccountRestApi/AccountRestApi/AccountRestApi.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,8 @@
     "/Users/hays/.nuget/packages/microsoft.extensions.configuration.abstractions/5.0.0/microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "/Users/hays/.nuget/packages/microsoft.extensions.dependencyinjection/5.0.2/microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
     "/Users/hays/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/5.0.0/microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "/Users/hays/.nuget/packages/microsoft.extensions.fileproviders.abstractions/5.0.0/microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
+    "/Users/hays/.nuget/packages/microsoft.extensions.fileproviders.embedded/5.0.0/microsoft.extensions.fileproviders.embedded.5.0.0.nupkg.sha512",
     "/Users/hays/.nuget/packages/microsoft.extensions.logging/5.0.0/microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "/Users/hays/.nuget/packages/microsoft.extensions.logging.abstractions/5.0.0/microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "/Users/hays/.nuget/packages/microsoft.extensions.options/5.0.0/microsoft.extensions.options.5.0.0.nupkg.sha512",
@@ -38,8 +40,17 @@
     "/Users/hays/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/hays/.nuget/packages/microsoft.win32.registry/4.7.0/microsoft.win32.registry.4.7.0.nupkg.sha512",
     "/Users/hays/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "/Users/hays/.nuget/packages/namotion.reflection/2.0.3/namotion.reflection.2.0.3.nupkg.sha512",
     "/Users/hays/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/hays/.nuget/packages/njsonschema/10.5.2/njsonschema.10.5.2.nupkg.sha512",
+    "/Users/hays/.nuget/packages/njsonschema.yaml/10.5.2/njsonschema.yaml.10.5.2.nupkg.sha512",
     "/Users/hays/.nuget/packages/npgsql/5.0.10/npgsql.5.0.10.nupkg.sha512",
+    "/Users/hays/.nuget/packages/nswag.annotations/13.13.2/nswag.annotations.13.13.2.nupkg.sha512",
+    "/Users/hays/.nuget/packages/nswag.aspnetcore/13.13.2/nswag.aspnetcore.13.13.2.nupkg.sha512",
+    "/Users/hays/.nuget/packages/nswag.core/13.13.2/nswag.core.13.13.2.nupkg.sha512",
+    "/Users/hays/.nuget/packages/nswag.core.yaml/13.13.2/nswag.core.yaml.13.13.2.nupkg.sha512",
+    "/Users/hays/.nuget/packages/nswag.generation/13.13.2/nswag.generation.13.13.2.nupkg.sha512",
+    "/Users/hays/.nuget/packages/nswag.generation.aspnetcore/13.13.2/nswag.generation.aspnetcore.13.13.2.nupkg.sha512",
     "/Users/hays/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "/Users/hays/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "/Users/hays/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
@@ -64,7 +75,8 @@
     "/Users/hays/.nuget/packages/system.text.encodings.web/4.7.2/system.text.encodings.web.4.7.2.nupkg.sha512",
     "/Users/hays/.nuget/packages/system.text.json/4.6.0/system.text.json.4.6.0.nupkg.sha512",
     "/Users/hays/.nuget/packages/system.threading.tasks.extensions/4.5.2/system.threading.tasks.extensions.4.5.2.nupkg.sha512",
-    "/Users/hays/.nuget/packages/system.windows.extensions/4.7.0/system.windows.extensions.4.7.0.nupkg.sha512"
+    "/Users/hays/.nuget/packages/system.windows.extensions/4.7.0/system.windows.extensions.4.7.0.nupkg.sha512",
+    "/Users/hays/.nuget/packages/yamldotnet/9.1.4/yamldotnet.9.1.4.nupkg.sha512"
   ],
   "logs": []
 }

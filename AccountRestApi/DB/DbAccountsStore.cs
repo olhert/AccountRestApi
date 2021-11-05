@@ -20,14 +20,14 @@ namespace AccountRestApi.DB
         public void RegisterAcc(IAccount account)
         {
             using IDbConnection db = new NpgsqlConnection(connectionString);
-            var sqlQuery = "INSERT INTO accounts_table (id, name, balance, currency) VALUES(@Id, @Name, @Balance, @Currency)";
+            var sqlQuery = "INSERT INTO accounts_table (id, name, balance, currency, user_id) VALUES(@Id, @Name, @Balance, @Currency, @UserId)";
             db.Execute(sqlQuery, account);
         }
 
-        public IEnumerable<IAccount> GetAllAccounts()
+        public IEnumerable<IAccount> GetAllUserAccounts(string userId)
         {
             using IDbConnection db = new NpgsqlConnection(connectionString);
-            return db.Query<DbAccount>("SELECT * FROM accounts_table").ToList();
+            return db.Query<DbAccount>("SELECT * FROM accounts_table where user_id = @userId", new {userId}).ToList();
         }
 
         public IAccount GetAccById(string idOfAccount)

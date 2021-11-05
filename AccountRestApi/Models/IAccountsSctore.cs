@@ -10,7 +10,7 @@ namespace AccountRestApi.Controllers
     {
         void RegisterAcc(IAccount acc);
 
-        IEnumerable<IAccount> GetAllAccounts();
+        IEnumerable<IAccount> GetAllUserAccounts(string userId);
 
         IAccount GetAccById(string idOfAccount);
 
@@ -32,9 +32,9 @@ namespace AccountRestApi.Controllers
             _accounts.Add(account.Id, account);
         }
         
-        public IEnumerable<IAccount> GetAllAccounts()
+        public IEnumerable<IAccount> GetAllUserAccounts(string userID)
         {
-            return _accounts.Values;
+            return _accounts.Values.Where(itm => itm.UserId == userID);
         }
         
         public IAccount GetAccById(string idOfAccount)

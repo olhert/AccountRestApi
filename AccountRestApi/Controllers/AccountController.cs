@@ -19,16 +19,18 @@ namespace AccountRestApi.Controllers
         }
 
         [HttpGet("/accounts")]
-        public IActionResult GetAllAccounts()
+        public IActionResult GetAllUserAccounts()
         {
-            return Ok(_accountsStore.GetAllAccounts());
+            var userId = Extensions.ParseAuthToken(HttpContext.Request.Headers["Authorization"]);
+            return Ok(_accountsStore.GetAllUserAccounts(userId));
         }
         
         [HttpPost("/accounts/add")]
         public IActionResult RegisterAcc(AccountRequest accountRequest)
         {
             var validator = new AccValidator();
-            ValidationResult result = validator.Validate(accountRequest);
+            var result = validator.Validate(accountRequest);
+
             if (result.IsValid == false)
             {
                 return Ok(new StatusModel {Errors = result.Errors.Select(failure => failure.ErrorMessage).ToList()});
@@ -38,7 +40,7 @@ namespace AccountRestApi.Controllers
                 var account = new Account
                 {
                     Id = Guid.NewGuid().ToString(),
-                    UserId = accountRequest.UserId,
+                    UserId = Extensions.ParseAuthToken(HttpContext.Request.Headers["Authorization"]),
                     Name = accountRequest.Name,
                     Currency = accountRequest.Currency,
                     Balance = 0
@@ -52,13 +54,13 @@ namespace AccountRestApi.Controllers
             }
         }
 
-        [HttpGet("/accounts/get/{idOfAccount:int}/")]
+        [HttpGet("/accounts/getById/{idOfAccount}/")]
         public IActionResult GetAccById(string idOfAccount)
         {
             return Ok (_accountsStore.GetAccById(idOfAccount));
         }
         
-        [HttpGet("/accounts/get/{nameOfAccount}/")]
+        [HttpGet("/accounts/getByName/{nameOfAccount}/")]
         public IActionResult GetAccByName(string nameOfAccount)
         {
             return Ok (_accountsStore.GetAccByName(nameOfAccount));

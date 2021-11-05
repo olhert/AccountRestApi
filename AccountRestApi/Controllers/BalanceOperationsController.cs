@@ -14,19 +14,19 @@ namespace AccountRestApi.Controllers
             _accountsStore = accountsStore;
         }
 
-        [HttpPost("/accounts/deposit/{accountId:int}/{sumOfDeposit:double}")]
+        [HttpPost("/accounts/deposit/{accountId}/{sumOfDeposit:double}")]
         public IActionResult Deposit(string accountId, double sumOfDeposit)
         {
             return Ok(_accountsStore.Deposit(accountId, sumOfDeposit));
         }
         
-        [HttpPost("/accounts/withdraw/{accountId:int}/{sumOfWithdrawal:double}")]
+        [HttpPost("/accounts/withdraw/{accountId}/{sumOfWithdrawal:double}")]
         public IActionResult Withdrawal(string accountId, double sumOfWithdrawal)
         {
             return Ok(_accountsStore.Withdrawal(accountId, sumOfWithdrawal));
         }
         
-        [HttpPost("/accounts/transfer/{senderAccId:int}/{recipientAccId:int}/{sumOfTransfer:double}")]
+        [HttpPost("/accounts/transfer/{senderAccId}/{recipientAccId}/{sumOfTransfer:double}")]
         public IActionResult Transfer(string senderAccId, string recipientAccId, double sumOfTransfer)
         {
             _accountsStore.Transfer(senderAccId, recipientAccId, sumOfTransfer);

@@ -20,7 +20,6 @@ namespace AuthenticationProject
         {
             RuleFor(x => x.Name).NotEmpty();
             RuleFor(x => x.Currency).NotEmpty();
-            RuleFor(x => x.UserId).NotEmpty();
         }
     }
 }

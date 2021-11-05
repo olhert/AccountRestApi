@@ -45,7 +45,7 @@ namespace AccountRestApi.Controllers
                 _userStore.Registration(user);
                 return Ok(new StatusModel
                 {
-                    Status = "success"
+                    Status = "the user is registered"
                 });
             }
             

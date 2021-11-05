@@ -13,7 +13,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Models;
+using NSwag;
+using OpenApiSecurityScheme = Microsoft.OpenApi.Models.OpenApiSecurityScheme;
 
 namespace AccountRestApi
 {
@@ -33,16 +34,19 @@ namespace AccountRestApi
             services.AddSingleton<IAccountsStore>(new DbAccountsStore("User ID=hays;Password=;Host=localhost;Port=5432;Database=AccountsDataBase;"));
             services.AddSingleton<IUserStore>(new DbUserStore("User ID=hays;Password=;Host=localhost;Port=5432;Database=AccountsDataBase;"));
 
-            services.AddSwaggerGen(c =>
+            services.AddSwaggerDocument(o =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "AccountRestApi", Version = "v1"});
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
-                    Type = SecuritySchemeType.ApiKey,
-                    Description = "Bearer Token",
-                    In = ParameterLocation.Header,
-                    Name = "Authorization"
-                });
+                o.Title = "API";
+                o.GenerateEnumMappingDescription = true;
+    
+                o.AddSecurity("Bearer", Enumerable.Empty<string>(),
+                    new NSwag.OpenApiSecurityScheme
+                    {
+                        Type = OpenApiSecuritySchemeType.ApiKey,
+                        Description = "Bearer Token",
+                        In = OpenApiSecurityApiKeyLocation.Header,
+                        Name = "Authorization"
+                    });
             });
         }
 
@@ -52,7 +56,7 @@ namespace AccountRestApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
+                app.UseOpenApi();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AccountRestApi v1"));
             }
 

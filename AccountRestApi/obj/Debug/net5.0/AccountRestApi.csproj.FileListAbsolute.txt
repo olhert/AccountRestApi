@@ -59,3 +59,13 @@
 /Users/hays/RiderProjects/AccountRestApi/AccountRestApi/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll
 /Users/hays/RiderProjects/AccountRestApi/AccountRestApi/bin/Debug/net5.0/System.Diagnostics.DiagnosticSource.dll
 /Users/hays/RiderProjects/AccountRestApi/AccountRestApi/bin/Debug/net5.0/Newtonsoft.Json.dll
+/Users/hays/RiderProjects/AccountRestApi/AccountRestApi/bin/Debug/net5.0/Namotion.Reflection.dll
+/Users/hays/RiderProjects/AccountRestApi/AccountRestApi/bin/Debug/net5.0/NJsonSchema.dll
+/Users/hays/RiderProjects/AccountRestApi/AccountRestApi/bin/Debug/net5.0/NJsonSchema.Yaml.dll
+/Users/hays/RiderProjects/AccountRestApi/AccountRestApi/bin/Debug/net5.0/NSwag.Annotations.dll
+/Users/hays/RiderProjects/AccountRestApi/AccountRestApi/bin/Debug/net5.0/NSwag.AspNetCore.dll
+/Users/hays/RiderProjects/AccountRestApi/AccountRestApi/bin/Debug/net5.0/NSwag.Core.dll
+/Users/hays/RiderProjects/AccountRestApi/AccountRestApi/bin/Debug/net5.0/NSwag.Core.Yaml.dll
+/Users/hays/RiderProjects/AccountRestApi/AccountRestApi/bin/Debug/net5.0/NSwag.Generation.dll
+/Users/hays/RiderProjects/AccountRestApi/AccountRestApi/bin/Debug/net5.0/NSwag.Generation.AspNetCore.dll
+/Users/hays/RiderProjects/AccountRestApi/AccountRestApi/bin/Debug/net5.0/YamlDotNet.dll
